@@ -37,7 +37,7 @@ export default { // Funciones, variables, metodos y todo el comportamiento del c
       // aleatorio: Math.floor(Math.random()*3),
     }
   },
-  methods:{ // Metodos utilizados
+  methods:{ // Métodos utilizados
 
   },
   watch:{ // Vigilar variables
