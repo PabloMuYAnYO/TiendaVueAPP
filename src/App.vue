@@ -1,26 +1,29 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <!-- Añadimos aquí nuestros componentes y otros elementos necesarios -->
+  <!-- <hello-world></hello-world> -->
+  <tienda-vue></tienda-vue>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+// Componentes importados a conponente mega padre "App.vue"
+//import HelloWorld from './components/HelloWorld.vue'
+import TiendaVue from './components/TiendaVue.vue';
 
 export default {
   name: 'App',
   components: {
-    HelloWorld
-  }
+    TiendaVue
+    // HelloWorld
+
+    }
 }
 </script>
 
 <style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+/* Añadimos aquí estilos globales */
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;  
 }
 </style>

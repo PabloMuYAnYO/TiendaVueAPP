@@ -1,5 +1,7 @@
 # plantillavue
 
+> Ejercicio de modulo DAW en asignatura de DESARROLLO WEB EN ENTORNO CLIENTE.
+
 ## Project setup
 ```
 npm install

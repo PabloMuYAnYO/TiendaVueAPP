@@ -1,6 +1,8 @@
+<!-- Esto es un ejemplo, crea los componentes con esta estructura -->
 <template>
   <div class="hello">
-    <h1>{{ msg }}</h1>
+    <!-- Añadimos aquí el html necesario para nuestro componente hijo -->
+    <h1>{{ msg }}</h1>   <!-- Añadido desde props:{msg} -->
     <p>
       For a guide and recipes on how to configure / customize this project,<br>
       check out the
@@ -31,15 +33,45 @@
 </template>
 
 <script>
-export default {
+// Componenetes importados a este componente
+// import OtroComponente from './components/OtroComponente.vue'
+export default { // Funciones, variables, metodos y todo el comportamiento del componente aquí
   name: 'HelloWorld',
-  props: {
+  components: { // Usar componenetes importados a este componente
+    // OtroComponente
+  },
+  data(){ // Variables usadas aquí
+    return{
+      // num: 1,
+      // texto: 'hola mundo',
+      // miArray: [
+      //   'ele1',
+      //   'ele2',
+      //   'ele3'
+      // ],
+      // aleatorio: Math.floor(Math.random()*3),
+    }
+  },
+  methods:{ // Metodos utilizados
+    // :\Datos_00\Academia_Grupo_Studio\2º_CURSO_DAW\FRONTEND\DWEC-JS\Ejercicios-Clase-DWEC\Clases\reutilizacion de componentes con props\contadores
+    // incrementar(){this.contador+=Number(this.cantidad)},
+    // decrementar(){this.contador-=Number(this.cantidad)},
+  },
+  watch:{ // Vigilar variables
+    // Ejemplo en :\Datos_00\Academia_Grupo_Studio\2º_CURSO_DAW\FRONTEND\DWEC-JS\Ejercicios-Clase-DWEC\Clases\Vue Watch\analizador;
+    // pregunta(valor){
+    //   if(valor.includes('?')){
+    //     this.obtenerRespuesta('')
+    //   }
+    // }
+  },
+  props: { // Propiedades declaradas aquí
     msg: String
   }
 }
 </script>
 
-<!-- Add "scoped" attribute to limit CSS to this component only -->
+<!-- Agregue el atributo "scoped" para limitar CSS solo a este componente -->
 <style scoped>
 h3 {
   margin: 40px 0 0;
@@ -56,3 +88,32 @@ a {
   color: #42b983;
 }
 </style>
+
+<!-- APUNTES
+
+Crear proyecto vue
+
+> vue create nombreproyecto
+
+Opciones predefinidas
+- preset = Manually select features
+- features = (*) Babel
+- version = 3.x
+- linter/formatter = EsLint with error prevention only
+- lint features = Lint on save
+- config for babel = In dedicated config files
+- thi in future projects? = >N
+
+Poco a poco se crearán los archivos necesarios para tu proyecto
+
+Al crearse podrás comprobar que todo esta listo con;
+
+Navegamos a la ruta correspondiente de nuestro proyecto
+> cd nombreproyecto
+
+Y iniciamos la vista desde un navegador
+>npm run serve
+
+Despues podremos visualizarlo desde  http://localhost:PORT/ o http://192.168.x.x:PORT/
+  
+-->
